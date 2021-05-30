@@ -1,0 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Tooltip, Toast, Popover } from 'bootstrap';
+import homeHtml from '../../html/home.html';
+import homecss from '../../styles/home.css';
+import enableSignOutBtnFunctionality from '../signOut';
+import notLoggedIn from '../notLoggedIn';
+import enableAddProjectBtnFunctionality from '../addProject';
+import loggedInActions from '../loggedInActions';
+enableSignOutBtnFunctionality();
+notLoggedIn(); 
+enableAddProjectBtnFunctionality(); 
+loggedInActions();

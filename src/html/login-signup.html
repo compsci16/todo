@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container text-white">
+        <div class="position-relative pb-5">
+            <h1 class="position-absolute top-0 start-50 translate-middle-x display-1">TODO</h1>
+        </div>
+        <div class="position-relative mt-5 ">
+            <form class="position-absolute top-0 start-50 translate-middle-x w-100" id="loginForm">
+                <div class="mb-3">
+                    <label for="inputEmail1" class="form-label text-white">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword1" class="form-label text-white">Password</label>
+                    <input type="password" class="form-control" id="inputPassword1">
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button type="button" class="btn btn-primary">Sign In</button>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signUpModal">
+                        <!-- data-bs-target="#exampleModal" -->
+                        Create an Account
+                    </button>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <button type="button" class="btn btn-light" id="signInWithGoogleBtn"><img width="20px"
+                            style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />Sign
+                        In with Google</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header  position-relative" id="modal-header">
+                    <h2 id="signUpTitle" class="modal-title">Sign Up</h2>
+                    <h6 id="signUpSubtitle">It's quick and easy.</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="signUpClose"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="signUpForm">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="name@example.com">
+                            <label for="email">Email address</label>
+                            <div id="validationServerEmailFeedback" class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                            <label for="password">Password</label>
+                            <div id="validationServerPasswordFeedback" class="invalid-feedback">
+                                Password must be at least 8 characters long and must contain a letter, digit and a
+                                special character.
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-2">
+                            <input type="checkbox" class="form-check-input" id="checkbox" value="">
+                            <label for="checkbox" class="form-check-label">Show Password</label>
+                        </div>
+
+
+                        <div class="modal-footer" id="modal-footer">
+                            <button type="button" class="btn btn-success btn-block btn-lg mt-3" id="signUpSave">Sign
+                                Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

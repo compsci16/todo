@@ -19,7 +19,16 @@
   },
   "homepage": "https://github.com/wintstack/todo#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "firebase": "^8.6.3"
   }
 }

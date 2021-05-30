@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap");
+:root{
+    --first: #1b262c;
+    --black: black;
+    --second: #0f4c75;
+    --third: #3282b8;
+    --fourth: #bbe1fa;
+    --heading-font: "Kanit", sans-serif;
+    --subheading-font: "Mate", serif;
+    --body-font: "Khula", sans-serif;
+}
+
+
+
+html,
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+    min-height: 200vh;
+    color: white;
+}
+#navBar,
+#sidebar {
+    font-family: var(--body-font);
+}
+h1 {
+    font-family: var(--heading-font);
+}
+h2 {
+    font-family: var(--subheading-font);
+}
+#navBar {
+    background-color: black;
+    font-size: 1.2rem;
+}
+
+#navBar > a {
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+#navBar a:hover {
+    background-color: #e03939;
+}
+
+#projectsDescription {
+    position: absolute;
+    top: 10rem;
+    width: 70%;
+    max-width: 470px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+#projectTitle {
+    display: flex;
+    position: relative;
+}
+#projectTitle i {
+    margin-left: auto;
+    align-self: center;
+    margin-right: 0.2em;
+    font-size: 1.4em;
+}
+
+#projectsDescription h2 {
+    border: 1px solid #eafcff;
+    background-color: #00a6fd;
+    padding: 0.25em;
+    font-size: 1.5em;
+    position: relative;
+}
+
+#projectsDescription h2 .fas {
+    font-size: 0.75em;
+    font-weight: lighter;
+    color: black;
+    position: absolute;
+    right: 0.5em;
+    top: 0.6em;
+}
+
+body {
+    background-color: #011624;
+}
+
+#sideBar {
+    display: none;
+    position: fixed;
+}
+
+
+#addProjectBtn:hover{
+ color: red;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #navBar {
+        align-items: center;
+        font-size: 1.4rem;
+        height: 4rem;
+    }
+
+    #navBar > a {
+        margin: 0;
+        width: auto;
+        text-align: center;
+        border-bottom: 0px;
+        margin-bottom: 0;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+    }
+    #navBar a:last-child {
+        margin-left: auto;
+    }
+
+    #projectsDescription {
+        max-width: 470px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #navBar {
+        position: fixed;
+        width: 100%;
+        border-bottom: 1.5px solid black;
+    }
+    #projectsDescription {
+        top: 10rem;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #navBar {
+        min-width: 100%;
+        border-bottom: 1.5px solid gray;
+    }
+    #sideBar {
+        display: block;
+        position: fixed;
+        width: 10.778rem;
+        top: 4rem;
+        height: 100vh;
+        text-decoration: none;
+        background-color: black;
+        font-size: 1.3rem;
+        
+    }
+    #sideBar a {
+
+        color: white;
+    }
+
+    #sideBar a:hover{
+        background-color: #e03939;
+    }
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

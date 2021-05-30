@@ -1,0 +1,77 @@
+:root{
+    --first: #1b262c;
+    --black:black;
+   --second: #0f4c75;
+   --third: #3282b8;
+   --fourth: #bbe1fa;
+   }
+   .first{
+       color: var(--first);
+   }
+   .second{
+       color: var(--second); 
+   }
+   .third{
+       color: var(--third);
+   }
+   .fourth{
+       color: var(--fourth); 
+   }
+   .btn-success{
+       background-color: #00a400;
+       transition: none;
+       border-color: #00a400;
+   }
+   .btn-success:hover, .btn-success:focus{
+       background: linear-gradient(#79bc64, #578843)!important;
+       border-color: #00a400;
+       box-shadow: none;
+   }
+   body{
+       /* background-color: rgba(128, 128, 128, 0.486); */
+       background-color: var(--first);
+   
+   }
+   form, .modal{
+       color:var(--first);
+   }
+   
+   button{
+       position: relative;
+   }
+   button>img{
+       position: absolute;
+       left: 8%;
+   }
+   /* // Small devices (landscape phones, 576px and up) */
+   @media (min-width: 576px) { 
+       #loginForm{
+           width: 80%!important;
+       }
+    }
+   
+   /* // Medium devices (tablets, 768px and up) */
+   @media (min-width: 768px) { 
+       #loginForm{
+           width: 50%!important;
+       }
+    }
+   
+   /* // Large devices (desktops, 992px and up) */
+   @media (min-width: 992px) { 
+       #loginForm{
+           width: 38%!important;
+       }
+    }
+   
+   /* // X-Large devices (large desktops, 1200px and up) */
+   @media (min-width: 1200px) { 
+       #loginForm{
+           width: 28%!important;
+           margin-top: 40px !important;
+       }
+       
+    }
+   
+   /* // XX-Large devices (larger desktops, 1400px and up) */
+   @media (min-width: 1400px) {  }
