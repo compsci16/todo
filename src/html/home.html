@@ -32,40 +32,80 @@
   </ul>
 
   <section id="projectsDescription">
-    <div id="projectTitle">
+    <div id="projectsTitle">
       <h1> Projects </h1>
       <button type="button" id="addProjectBtn" data-bs-toggle="modal" data-bs-target="#addProjectModal"> <i
           class="fas fa-plus-square"></i> </button>
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
+  <!-- Modal for Projects -->
+  <form id="saveProjectForm">
+    <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectTitle" contentEditable="true">Project title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Project Description"
+                id="projectDescription"></textarea>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Modal for Tasks - Need not be a modal btw -->
+  <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="taskTitle" contentEditable="true">Task title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <button id="addTasksBtn">Add Tasks</button>
-
           <!-- List of Tasks  -->
-          <ul class="list-group" id = "modalTasksList">
-           
+          <ul class="list-group" id="modalTasksList">
+
           </ul>
 
           <!-- Form For input of Task -->
-          <form id = "taskForm">
+          <form id="taskForm">
             <div class="input-group mb-3">
               <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" value=""
                   aria-label="Checkbox for following text input" id="taskCheckbox">
               </div>
-              <input type="text" class="form-control" aria-label="Text input with checkbox" id="taskInput">
+              <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Task Title"
+                id="taskInput">
+            </div>
+
+            <div class="input-group mb-3">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Task Description"></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+              <input class="form-control" type="date" id="dueDate">
+              <select class="form-select" aria-label="Priority" id="priority">
+                <option selected>Choose Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
           </form>
-         
+
 
           <!-- Add Task Button  -->
           <div id="addTaskDiv" class="clearfix">

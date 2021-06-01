@@ -7,7 +7,9 @@ import enableSignOutBtnFunctionality from '../signOut';
 import notLoggedIn from '../notLoggedIn';
 import loggedInActions from '../loggedInActions';
 import modalAddTaskBtn from '../modalAddTaskBtn';
+import saveProject from '../saveProject'
 enableSignOutBtnFunctionality();
 notLoggedIn(); 
 loggedInActions();
 modalAddTaskBtn();
+saveProject(); 

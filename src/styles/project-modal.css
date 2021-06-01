@@ -5,10 +5,14 @@
     position: relative;
     margin-left: 80%;
 }
-#addTaskBtn{
-  
+#projectTitle:focus{
+outline: none;
 }
 
 .list-group-item{
     border-top-width: 1px !important; 
+}
+
+#priority{
+    max-width: 168px !important; 
 }

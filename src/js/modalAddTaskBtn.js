@@ -13,6 +13,7 @@ function getTaskHtml(task, checked) {
 
 
 
+
 function addTaskToDisplay() {
   const task = document.createElement('li');
   task.classList.add('list-group-item', 'mb-3');

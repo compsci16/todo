@@ -63,11 +63,11 @@ h2 {
   
 }
 
-#projectTitle {
+#projectsTitle {
     display: flex;
     position: relative;
 }
-#projectTitle i {
+#projectsTitle i {
     margin-left: auto;
     align-self: center;
     margin-right: 0.2em;
