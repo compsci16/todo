@@ -8,3 +8,7 @@
 #addTaskBtn{
   
 }
+
+.list-group-item{
+    border-top-width: 1px !important; 
+}

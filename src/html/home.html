@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script src="https://kit.fontawesome.com/2edfd96d61.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script src="https://kit.fontawesome.com/2edfd96d61.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="nav" id="navBar">
-            <a class="nav-link" href="#"><span><i class="fas fa-home"></i> Dashboard </span></a>
-            <a class="nav-link" href="#"><span><i class="far fa-folder-open"></i> Collections </span></a>
-            <a class="nav-link" href="#" id="signOut"><span><i class="fas fa-sign-out-alt"></i> Sign Out</span></a>
-        </nav>
-    </header>
+  <header>
+    <nav class="nav" id="navBar">
+      <a class="nav-link" href="#"><span><i class="fas fa-home"></i> Dashboard </span></a>
+      <a class="nav-link" href="#"><span><i class="far fa-folder-open"></i> Collections </span></a>
+      <a class="nav-link" href="#" id="signOut"><span><i class="fas fa-sign-out-alt"></i> Sign Out</span></a>
+    </nav>
+  </header>
 
-    <ul class="nav flex-column sticky-top" id="sideBar">
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-school"></i> School</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-user"></i> Personal</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-edit"></i> Design</a>
-        </li>
-    </ul>
+  <ul class="nav flex-column sticky-top" id="sideBar">
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fas fa-school"></i> School</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fas fa-user"></i> Personal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fas fa-edit"></i> Design</a>
+    </li>
+  </ul>
 
-    <section id="projectsDescription">
-        <div id="projectTitle">
-            <h1> Projects </h1>
-            <button type="button" id="addProjectBtn" data-bs-toggle="modal" data-bs-target="#addProjectModal"> <i
-                    class="fas fa-plus-square"></i> </button>
-        </div>
-    </section>
+  <section id="projectsDescription">
+    <div id="projectTitle">
+      <h1> Projects </h1>
+      <button type="button" id="addProjectBtn" data-bs-toggle="modal" data-bs-target="#addProjectModal"> <i
+          class="fas fa-plus-square"></i> </button>
+    </div>
+  </section>
 
-<!-- Modal -->
-<div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -48,32 +48,39 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <button id = "addTasksBtn">Add Tasks</button>
-          <ol>
-              <li>A</li>
-              <li>B</li>
-          </ol>
+          <button id="addTasksBtn">Add Tasks</button>
 
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+          <!-- List of Tasks  -->
+          <ul class="list-group" id = "modalTasksList">
+           
+          </ul>
+
+          <!-- Form For input of Task -->
+          <form id = "taskForm">
+            <div class="input-group mb-3">
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" value=""
+                  aria-label="Checkbox for following text input" id="taskCheckbox">
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox" id="taskInput">
             </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
-            
-          </div>
-          <div id = "addTaskDiv" class="clearfix">
+          </form>
+         
+
+          <!-- Add Task Button  -->
+          <div id="addTaskDiv" class="clearfix">
             <button class="btn  btn-primary float-end" type="button" id="addTaskBtn">Add!</button>
           </div>
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
         </div>
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>
