@@ -2,124 +2,127 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <script src="https://kit.fontawesome.com/2edfd96d61.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/2edfd96d61.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <header>
-    <nav class="nav" id="navBar">
-      <a class="nav-link" href="#"><span><i class="fas fa-home"></i> Dashboard </span></a>
-      <a class="nav-link" href="#"><span><i class="far fa-folder-open"></i> Collections </span></a>
-      <a class="nav-link" href="#" id="signOut"><span><i class="fas fa-sign-out-alt"></i> Sign Out</span></a>
-    </nav>
-  </header>
+    <header>
+        <nav class="nav" id="navBar">
+            <a class="nav-link" href="#"><span><i class="fas fa-home"></i> Dashboard </span></a>
+            <a class="nav-link" href="#"><span><i class="far fa-folder-open"></i> Collections </span></a>
+            <a class="nav-link" href="#" id="signOut"><span><i class="fas fa-sign-out-alt"></i> Sign Out</span></a>
+        </nav>
+    </header>
 
-  <ul class="nav flex-column sticky-top" id="sideBar">
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fas fa-school"></i> School</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fas fa-user"></i> Personal</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fas fa-edit"></i> Design</a>
-    </li>
-  </ul>
+    <ul class="nav flex-column sticky-top" id="sideBar">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-school"></i> School</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user"></i> Personal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-edit"></i> Design</a>
+        </li>
+    </ul>
+    <section id="currentProject">
+        <h1>Evermore</h1>
+        <!-- Add Task Button  -->
+        <div id="addTaskDiv" class="clearfix mb-1 ml-5">
+            <button class="btn  btn-primary float-end" type="button" id="addTaskBtn" data-bs-toggle="modal"
+                data-bs-target="#addTaskModal">Add Task!</button>
+        </div>
+    </section>
 
-  <section id="projectsDescription">
-    <div id="projectsTitle">
-      <h1> Projects </h1>
-      <button type="button" id="addProjectBtn" data-bs-toggle="modal" data-bs-target="#addProjectModal"> <i
-          class="fas fa-plus-square"></i> </button>
+
+    <section id="projectsDescription">
+        <div id="projectsTitle">
+            <h1> Projects </h1>
+            <button type="button" id="addProjectBtn" data-bs-toggle="modal" data-bs-target="#addProjectModal"> <i
+                    class="fas fa-plus-square "></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal for Projects -->
+    <form id="saveProjectForm">
+        <div class="modal" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectTitle" contentEditable="true">Project title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" aria-label="With textarea" placeholder="Project Description"
+                                id="projectDescription"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal for Tasks - Need not be a modal btw -->
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskTitle" contentEditable="true">Task title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form For input of Task -->
+                    <form id="taskForm">
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                    aria-label="Checkbox for following text input" id="taskCheckbox">
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox"
+                                placeholder="Task Title" id="taskInput">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" aria-label="With textarea"
+                                placeholder="Task Description"></textarea>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="date" id="dueDate">
+                            <select class="form-select" aria-label="Priority" id="priority">
+                                <option selected>Choose Priority</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Task</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <!-- Modal for Projects -->
-  <form id="saveProjectForm">
-    <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectTitle" contentEditable="true">Project title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="input-group mb-3">
-              <textarea class="form-control" aria-label="With textarea" placeholder="Project Description"
-                id="projectDescription"></textarea>
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-
-  <!-- Modal for Tasks - Need not be a modal btw -->
-  <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="taskTitle" contentEditable="true">Task title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- List of Tasks  -->
-          <ul class="list-group" id="modalTasksList">
-
-          </ul>
-
-          <!-- Form For input of Task -->
-          <form id="taskForm">
-            <div class="input-group mb-3">
-              <div class="input-group-text">
-                <input class="form-check-input mt-0" type="checkbox" value=""
-                  aria-label="Checkbox for following text input" id="taskCheckbox">
-              </div>
-              <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Task Title"
-                id="taskInput">
-            </div>
-
-            <div class="input-group mb-3">
-              <textarea class="form-control" aria-label="With textarea" placeholder="Task Description"></textarea>
-            </div>
-
-            <div class="input-group mb-3">
-              <input class="form-control" type="date" id="dueDate">
-              <select class="form-select" aria-label="Priority" id="priority">
-                <option selected>Choose Priority</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-          </form>
-
-
-          <!-- Add Task Button  -->
-          <div id="addTaskDiv" class="clearfix">
-            <button class="btn  btn-primary float-end" type="button" id="addTaskBtn">Add!</button>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </body>
 

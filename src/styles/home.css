@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap");
-:root{
+:root {
     --first: #1b262c;
     --black: black;
     --second: #0f4c75;
@@ -11,8 +11,6 @@
     --subheading-font: "Mate", serif;
     --body-font: "Khula", sans-serif;
 }
-
-
 
 html,
 body {
@@ -26,19 +24,33 @@ body {
 #sidebar {
     font-family: var(--body-font);
 }
+
 h1 {
     font-family: var(--heading-font);
 }
+
 h2 {
     font-family: var(--subheading-font);
 }
+
 #navBar {
     background-color: black;
     font-size: 1.2rem;
     z-index: 1;
 }
 
-#navBar > a {
+
+#projectsDescription h2 button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#navBar>a {
     color: white;
     margin-right: auto;
     margin-left: auto;
@@ -51,7 +63,8 @@ h2 {
     background-color: #e03939;
 }
 
-#projectsDescription {
+
+#projectsDescription, #currentProject {
     position: absolute;
     top: 10rem;
     width: 70%;
@@ -60,13 +73,17 @@ h2 {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-  
+}
+
+#projectsDescription{
+    display: none;
 }
 
 #projectsTitle {
     display: flex;
     position: relative;
 }
+
 #projectsTitle i {
     margin-left: auto;
     align-self: center;
@@ -82,17 +99,26 @@ h2 {
     position: relative;
 }
 
-#projectsDescription h2 .fas {
-    font-size: 0.75em;
-    font-weight: lighter;
-    color: black;
-    position: absolute;
-    right: 0.5em;
-    top: 0.6em;
+#projectFront {
+    display: flex;
 }
 
-.fa-trash-alt:hover{
-    color: rgb(218, 47, 47) !important;
+.projEdit {
+    position: absolute;
+    right: 35px;
+}
+
+.projDel {
+    position: absolute;
+    right: 6px;
+}
+
+.fa-trash-alt:hover {
+    color: rgb(255, 4, 4) !important;
+}
+
+.fa-edit:hover {
+    color: #00ff00;
 }
 
 body {
@@ -104,21 +130,25 @@ body {
     position: fixed;
 }
 
-#addProjectBtn{
+#addProjectBtn {
     all: unset;
     cursor: pointer;
     padding-left: 58%;
 }
-#addProjectBtn i{
+
+#addProjectBtn i {
     padding-top: 10px;
 }
+
 #addProjectBtn:hover {
- color: red;
+    color: red;
 }
 
+
 /* // Small devices (landscape phones, 576px and up) */
+
 @media (min-width: 576px) {
-    #addProjectBtn{
+    #addProjectBtn {
         padding-left: 68%;
     }
     #navBar {
@@ -126,8 +156,7 @@ body {
         font-size: 1.4rem;
         height: 4rem;
     }
-
-    #navBar > a {
+    #navBar>a {
         margin: 0;
         width: auto;
         text-align: center;
@@ -140,13 +169,14 @@ body {
     #navBar a:last-child {
         margin-left: auto;
     }
-
     #projectsDescription {
         max-width: 470px;
     }
 }
 
+
 /* // Medium devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
     #navBar {
         position: fixed;
@@ -158,9 +188,11 @@ body {
     }
 }
 
+
 /* // Large devices (desktops, 992px and up) */
+
 @media (min-width: 992px) {
-    #addProjectBtn{
+    #addProjectBtn {
         padding-left: 66%;
     }
     #navBar {
@@ -176,23 +208,21 @@ body {
         text-decoration: none;
         background-color: black;
         font-size: 1.3rem;
-        
     }
     #sideBar a {
-
         color: white;
     }
-
-    #sideBar a:hover{
+    #sideBar a:hover {
         background-color: #e03939;
     }
-
 }
+
 
 /* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+
+@media (min-width: 1200px) {}
+
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-}
+
+@media (min-width: 1400px) {}
