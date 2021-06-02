@@ -1,5 +1,5 @@
 #currentProject{
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: flex-end;
 }
