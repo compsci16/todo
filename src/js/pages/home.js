@@ -6,12 +6,22 @@ import currentProjectcss from '../../styles/current-project.css'
 import { Tooltip, Toast, Popover } from 'bootstrap';
 import enableSignOutBtnFunctionality from '../signOut';
 import notLoggedIn from '../notLoggedIn';
-//import modalAddTaskBtn from '../modalAddTaskBtn';
 import saveProject from '../saveProject';
 import loadProjects from '../loadProjects';
 
+function homeProjectToggle() {
+    const homeBtn = document.getElementById('homeBtn');
+    homeBtn.addEventListener('click', function () {
+        const homeDisplay = document.getElementById('projectsDescription');
+        const currentProjectDisplay = document.getElementById('currentProject');
+        currentProjectDisplay.style.display = 'none';
+        homeDisplay.style.display = 'block';
+    })
+}
+
+
 enableSignOutBtnFunctionality();
-notLoggedIn(); 
-//modalAddTaskBtn();
-saveProject(); 
-loadProjects(); 
+notLoggedIn();
+saveProject();
+loadProjects();
+homeProjectToggle();

@@ -6,7 +6,4 @@ export default class Task{
         this.dueDate = dueDate;
         this.priority = priority; 
     }
-    edit(property, value) {
-        this[property] = value; 
-    }
 }

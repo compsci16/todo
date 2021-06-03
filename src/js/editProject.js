@@ -1,25 +1,28 @@
 import getFirestoreDB from './firestoreDB';
 import getCurrentUserID from './currentUserID';
-import addTaskToDB from './addTask';
-import { displayTasks } from './displayTasks';
+import addTask from './addTask';
+import displayTask from './displayTask';
 
 let id;
 
 function editDisplay(docData) {
     let container = document.getElementById('currentProject');
+    container.style.display = 'flex';
     container.innerHTML = `<h1>${docData.title}</h1>
     <!-- Add Task Button  -->
     <div id="addTaskDiv" class="clearfix mb-1 ml-5">
         <button class="btn  btn-primary float-end" type="button" id="addTaskBtn" data-bs-toggle="modal"
             data-bs-target="#addTaskModal">Add Task!</button> 
-    </div>`;
-    container.style.display = 'flex';
+    </div>
+    <div id="taskList">
+        </div>`;
 
 }
 
 function saveTask() {
     const saveTaskBtn = document.getElementById('saveTaskBtn');
-    saveTaskBtn.addEventListener('click', (event) => addTaskToDB(event, id));
+    document.getElementById('taskForm').reset();
+    saveTaskBtn.addEventListener('click', (event) => addTask(event, id));
 }
 
 function editProject(e) {
@@ -38,13 +41,12 @@ function editProject(e) {
             // doc.data() will be undefined in this case
             console.log("No such document!");
         }
-        // Step 0 - Display the current tasks
-        console.log(Object.values(docData.tasks).forEach(task => console.log(task)));
-
         // Step 1 - Display the Project
         document.getElementById('projectsDescription').style.display = 'none';
         editDisplay(docData);
 
+        // Step 1.5 - Display the Project's tasks
+        setTimeout(() => console.log(Object.values(docData.tasks).map(task => displayTask(task))), 500);
         // Step 2 - Add listener to save task btn
         saveTask();
 

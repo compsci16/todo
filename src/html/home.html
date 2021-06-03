@@ -13,7 +13,7 @@
 
     <header>
         <nav class="nav" id="navBar">
-            <a class="nav-link" href="#"><span><i class="fas fa-home"></i> Dashboard </span></a>
+            <a class="nav-link" href="#" id = "homeBtn"><span><i class="fas fa-home"></i> Dashboard </span></a>
             <a class="nav-link" href="#"><span><i class="far fa-folder-open"></i> Collections </span></a>
             <a class="nav-link" href="#" id="signOut"><span><i class="fas fa-sign-out-alt"></i> Sign Out</span></a>
         </nav>
@@ -33,13 +33,17 @@
     <section id="currentProject">
         <!-- <h1>Evermore</h1> -->
         <!-- Add Task Button  -->
-        <!-- <div id="addTaskDiv" class="clearfix mb-1 ml-5">
-            <button class="btn  btn-primary float-end" type="button" id="addTaskBtn" data-bs-toggle="modal"
-                data-bs-target="#addTaskModal">Add Task!</button>
+        <!-- <div id="addTaskDiv" class="clearfix mb-1 ml-5"> -->
+            <!-- <button class="btn  btn-primary float-end" type="button" id="addTaskBtn" data-bs-toggle="modal" -->
+                <!-- data-bs-target="#addTaskModal">Add Task!</button> -->
+        <!-- </div> -->
+        <!-- <div id="taskList">
         </div> -->
     </section>
 
-
+<!-- <div class="task">Some Task<br>Description: <br> DueDate <br> Priority <br> </div>
+            <div class="task">Some Task<br>Description: <br> DueDate <br> Priority <br> </div>
+            <div class="task">Some Task<br>Description: <br> DueDate <br> Priority <br> </div> -->
     <section id="projectsDescription">
         <div id="projectsTitle">
             <h1> Projects </h1>
@@ -67,7 +71,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="saveProjectBtn">Save Project</button>
+                        <button type="button" class="btn btn-primary" id="saveProjectBtn" data-bs-dismiss="modal">Save Project</button>
                     </div>
                 </div>
             </div>
@@ -79,7 +83,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="taskTitle" contentEditable="true">Task title</h5>
+                    <h5 class="modal-title" id="taskTitle">Edit Task</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -95,8 +99,8 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <textarea class="form-control" aria-label="With textarea"
-                                placeholder="Task Description" id = "taskDescription"></textarea>
+                            <textarea class="form-control" aria-label="With textarea" placeholder="Task Description"
+                                id="taskDescription"></textarea>
                         </div>
 
                         <div class="input-group mb-3">
@@ -118,7 +122,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveTaskBtn">Save Task</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveTaskBtn">Save Task</button>
                 </div>
             </div>
         </div>
